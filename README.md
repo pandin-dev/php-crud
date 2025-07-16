@@ -21,9 +21,11 @@ project/
 ├── app/
 │   ├── controllers/
 │   │   ├── HomeController.php
-│   │   └── UserController.php
+│   │   ├── UserController.php
+│   │   └── LogController.php
 │   ├── core/
 │   │   ├── Database.php
+│   │   ├── Logger.php
 │   │   └── Router.php
 │   ├── models/
 │   │   └── User.php
@@ -36,12 +38,18 @@ project/
 │       │   ├── create.php
 │       │   ├── edit.php
 │       │   └── show.php
+│       ├── logs/
+│       │   └── index.php
 │       └── home.php
 ├── config/
 │   ├── app.php
-│   └── database.php
+│   ├── database.php
+│   └── database.example.php
 ├── database/
 │   └── schema.sql
+├── storage/
+│   └── logs/
+│       └── database_actions.json
 └── public/
     ├── assets/
     │   └── css/

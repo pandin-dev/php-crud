@@ -1,9 +1,9 @@
 # Arquivos de configuração local
 config/database.php
 
-# Logs
-logs/*.log
-logs/*.json
+# Logs e arquivos de storage
+storage/logs/*.log
+storage/logs/*.json
 *.log
 
 # Arquivos temporários

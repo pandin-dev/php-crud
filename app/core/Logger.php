@@ -7,7 +7,7 @@ class Logger
 
     public function __construct()
     {
-        $this->logFile = __DIR__ . '/../../logs/database_actions.json';
+        $this->logFile = __DIR__ . '/../../storage/logs/database_actions.json';
         $this->ensureLogFileExists();
     }
 
