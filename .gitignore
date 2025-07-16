@@ -1,0 +1,44 @@
+# Arquivos de configuração local
+config/database.php
+
+# Logs
+logs/*.log
+logs/*.json
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Arquivos do editor
+.vscode/
+.idea/
+*.sublime-*
+
+# Arquivos do sistema
+*.swp
+*.swo
+*~
+
+# Cache
+cache/
+tmp/
+
+# Uploads (se existir)
+uploads/
+public/uploads/
+
+# Dependências (se usar Composer futuramente)
+vendor/
+composer.lock
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.production
+
+# Backup de banco
+*.sql.backup
+database_backup/

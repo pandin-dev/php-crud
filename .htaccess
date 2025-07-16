@@ -1,0 +1,12 @@
+# .htaccess da raiz do projeto (para usar quando não conseguir configurar Document Root)
+RewriteEngine On
+
+# Redirecionar todas as requisições para a pasta public
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Se acessar diretamente a raiz, redirecionar para public
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ public/ [L]
