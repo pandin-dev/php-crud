@@ -13,6 +13,7 @@ require_once BASE_PATH . '/../app/core/Router.php';
 require_once BASE_PATH . '/../app/controllers/HomeController.php';
 require_once BASE_PATH . '/../app/controllers/UserController.php';
 require_once BASE_PATH . '/../app/controllers/LogController.php';
+require_once BASE_PATH . '/../app/controllers/XmlController.php';
 
 // Criar instância do router
 $router = new Router();
@@ -34,6 +35,12 @@ $router->addRoute('POST', '/users/delete', 'UserController', 'delete');
 $router->addRoute('GET', '/logs', 'LogController', 'index');
 $router->addRoute('GET', '/logs/clear', 'LogController', 'clear');
 $router->addRoute('GET', '/logs/api', 'LogController', 'api');
+
+// Rotas para XML (Import/Export)
+$router->addRoute('GET', '/xml', 'XmlController', 'index');
+$router->addRoute('POST', '/xml/import', 'XmlController', 'import');
+$router->addRoute('GET', '/xml/export', 'XmlController', 'export');
+$router->addRoute('GET', '/xml/exemplo', 'XmlController', 'exemplo');
 
 // Obter o método e o caminho da requisição
 $requestMethod = $_SERVER['REQUEST_METHOD'];

@@ -9,6 +9,7 @@ Sistema CRUD (Create, Read, Update, Delete) completo desenvolvido em PHP puro, s
 - **Visualizar usuário**: Detalhes completos de um usuário específico
 - **Editar usuários**: Atualização de informações dos usuários
 - **Excluir usuários**: Remoção de usuários com confirmação
+- **Import/Export XML**: Importação e exportação de dados em formato XML
 - **Sistema de logs**: Registro completo de operações no banco de dados
 - **Validação robusta**: Validação completa de todos os campos
 - **Interface responsiva**: Layout responsivo com Bootstrap 5
@@ -174,6 +175,13 @@ project/
 | GET | `/users/edit?id={id}` | UserController@edit | Formulário de edição |
 | POST | `/users/update` | UserController@update | Atualizar usuário |
 | POST | `/users/delete` | UserController@delete | Excluir usuário |
+| GET | `/logs` | LogController@index | Página de logs |
+| GET | `/logs/clear` | LogController@clear | Limpar logs |
+| GET | `/logs/api` | LogController@api | API JSON dos logs |
+| GET | `/xml` | XmlController@index | Gerenciar XML |
+| POST | `/xml/import` | XmlController@import | Importar XML |
+| GET | `/xml/export` | XmlController@export | Exportar XML |
+| GET | `/xml/exemplo` | XmlController@exemplo | Baixar XML exemplo |
 
 ## ✅ Validações Implementadas
 

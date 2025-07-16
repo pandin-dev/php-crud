@@ -34,6 +34,7 @@
             <div class="navbar-nav">
                 <a class="nav-link" href="/">Home</a>
                 <a class="nav-link" href="/users">Usuários</a>
+                <a class="nav-link" href="/xml"><i class="fas fa-file-code"></i> XML</a>
                 <a class="nav-link" href="/logs"><i class="fas fa-clipboard-list"></i> Logs</a>
             </div>
         </div>

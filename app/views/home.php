@@ -53,13 +53,13 @@
     <div class="col-md-6 col-lg-3">
         <div class="card h-100 border-0 shadow-sm hover-card">
             <div class="card-body text-center p-4">
-                <div class="feature-icon bg-warning bg-gradient text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                    <i class="fas fa-edit fa-lg"></i>
+                <div class="feature-icon bg-info bg-gradient text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                    <i class="fas fa-file-code fa-lg"></i>
                 </div>
-                <h5 class="card-title mb-2">Editar</h5>
-                <p class="card-text text-muted small mb-3">Atualizar informações</p>
-                <a href="/users" class="btn btn-outline-warning btn-sm rounded-pill">
-                    Gerenciar
+                <h5 class="card-title mb-2">XML</h5>
+                <p class="card-text text-muted small mb-3">Importar/Exportar dados</p>
+                <a href="/xml" class="btn btn-outline-info btn-sm rounded-pill">
+                    Gerenciar XML
                 </a>
             </div>
         </div>
@@ -68,13 +68,13 @@
     <div class="col-md-6 col-lg-3">
         <div class="card h-100 border-0 shadow-sm hover-card">
             <div class="card-body text-center p-4">
-                <div class="feature-icon bg-danger bg-gradient text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                    <i class="fas fa-trash fa-lg"></i>
+                <div class="feature-icon bg-warning bg-gradient text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                    <i class="fas fa-chart-line fa-lg"></i>
                 </div>
-                <h5 class="card-title mb-2">Excluir</h5>
-                <p class="card-text text-muted small mb-3">Remover usuários</p>
-                <a href="/users" class="btn btn-outline-danger btn-sm rounded-pill">
-                    Gerenciar
+                <h5 class="card-title mb-2">Logs</h5>
+                <p class="card-text text-muted small mb-3">Monitorar atividades</p>
+                <a href="/logs" class="btn btn-outline-warning btn-sm rounded-pill">
+                    Ver Logs
                 </a>
             </div>
         </div>
