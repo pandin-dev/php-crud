@@ -1,10 +1,13 @@
--- Script SQL para criar o banco de dados e tabela do sistema CRUD
-
--- Criar o banco de dados
-CREATE DATABASE IF NOT EXISTS crud_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
--- Usar o banco de dados
-USE crud_db;
+-- Script SQL para criar a estrutura do Sistema CRUD
+-- 
+-- INSTRUÇÕES:
+-- 1. Crie um banco de dados com o nome de sua preferência
+-- 2. Execute este script no banco criado
+-- 3. Configure o nome do banco no arquivo config/database.php
+--
+-- Exemplo de criação do banco (opcional - use o nome que preferir):
+-- CREATE DATABASE meu_sistema_crud CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- USE meu_sistema_crud;
 
 -- Criar a tabela de usuários
 CREATE TABLE IF NOT EXISTS users (
@@ -17,7 +20,7 @@ CREATE TABLE IF NOT EXISTS users (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Inserir alguns dados de exemplo
+-- Inserir alguns dados de exemplo (opcional)
 INSERT INTO users (nome, email, telefone, data_nascimento) VALUES
 ('João Silva', 'joao.silva@email.com', '(11) 99999-1111', '1990-05-15'),
 ('Maria Santos', 'maria.santos@email.com', '(11) 99999-2222', '1985-08-22'),
@@ -30,8 +33,5 @@ CREATE INDEX idx_users_email ON users(email);
 CREATE INDEX idx_users_nome ON users(nome);
 CREATE INDEX idx_users_created_at ON users(created_at);
 
--- Mostrar a estrutura da tabela
+-- Exibir estrutura da tabela criada
 DESCRIBE users;
-
--- Mostrar os dados inseridos
-SELECT * FROM users ORDER BY id;

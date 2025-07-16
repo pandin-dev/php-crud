@@ -72,11 +72,20 @@ project/
    - Certifique-se de que o mod_rewrite está habilitado
 
 3. **Configure o banco de dados**
-   - Edite o arquivo `config/database.php` com suas credenciais:
+   
+   **Passo 1: Criar o banco de dados**
+   ```sql
+   CREATE DATABASE meu_sistema_crud CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+   ```
+   *(Use o nome que preferir para o banco)*
+   
+   **Passo 2: Configurar as credenciais**
+   - Copie o arquivo `config/database.example.php` para `config/database.php`
+   - Edite com suas credenciais:
    ```php
    return [
        'host' => 'localhost',
-       'dbname' => 'crud_db',
+       'dbname' => 'meu_sistema_crud', // Nome do seu banco
        'username' => 'seu_usuario',
        'password' => 'sua_senha',
        // ...
@@ -85,14 +94,27 @@ project/
 
 4. **Execute o script SQL**
    ```sql
-   mysql -u seu_usuario -p < database/schema.sql
+   -- Conecte ao seu banco e execute:
+   mysql -u seu_usuario -p meu_sistema_crud < database/schema.sql
    ```
+   *Ou importe o arquivo `database/schema.sql` via phpMyAdmin*
 
 5. **Configure as permissões**
    ```bash
    chmod 755 public/
    chmod 644 public/.htaccess
    ```
+
+## 💡 Configuração Rápida
+
+### Para desenvolvimento local (XAMPP/WAMP):
+
+1. **Extraia o projeto** na pasta `htdocs/`
+2. **Crie um banco** via phpMyAdmin (ex: `meu_crud`)
+3. **Importe** o arquivo `database/schema.sql`
+4. **Copie** `config/database.example.php` → `config/database.php`
+5. **Configure** as credenciais no arquivo copiado
+6. **Acesse** `http://localhost/php-crud/public/`
 
 ## 🔧 Configuração do Apache
 
